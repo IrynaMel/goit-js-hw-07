@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 const div = document.querySelector('.gallery');
 
 const images = galleryItems.map(({preview, original, description}) => 
-    `<li><a class="gallery__item" href=${original}>
+    `<li class="gallery__item"><a class="gallery__link" href=${original}>
   <img class="gallery__image" src=${preview} alt='${description}' />
 </a></li>
 `).join("");
