@@ -18,16 +18,16 @@ const images = galleryItems.map(({preview, original, description}) =>
 
     div.addEventListener("click", modalOpen)
 
+    const instance = basicLightbox.create(`
+            <img src="" width="800" height="600">
+            `)
     
-
     function modalOpen(e){
         e.preventDefault();
-        const url = e.target.getAttribute('data-source');
         if (e.target === e.currentTarget) {
             return }
-            const instance = basicLightbox.create(`
-            <img src=${url} width="800" height="600">
-            `)
+        const image = instance.element().querySelector('img')
+        image.src = e.target.getAttribute('data-source');
          
          instance.show()
     }
