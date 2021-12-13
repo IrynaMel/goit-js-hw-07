@@ -12,10 +12,7 @@ div.insertAdjacentHTML('beforeEnd', images);
 
 
      
-new SimpleLightbox('.gallery a', {
-    captionSelector:'img',
-    captionType: 'alt',
+new SimpleLightbox('.gallery a', { 
     captionsData: 'alt',
     captionDelay: 250,
-    captionPosition:'bottom',
  })

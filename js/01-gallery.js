@@ -31,8 +31,19 @@ const images = galleryItems.map(({preview, original, description}) =>
          
          instance.show()
     }
+
+    window.addEventListener('keydown', onEscape)
+
+    function onEscape(e){
+      if (e.keyCode === 27){
+        instance.close()
+        div.removeEventListener('keydown', onEscape);
+      }
+        return
+    
+    }
         
-        
+       
         
         
   
